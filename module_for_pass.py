@@ -25,8 +25,8 @@ def user_num_in_out_txt(list_of_nums) -> str:
     """
     out_str = ""
     number_digits = len(list_of_nums)
-    if (number_digits != 6):
-        return "The list aren't correct something got wrong"
+    if number_digits != 6:
+        return "The list aren't correct something got wrong!"
     else:
         for numbers in list_of_nums:
             out_str = out_str + transforms_num(numbers)[1:-1]
@@ -51,7 +51,7 @@ def transforms_num(number) -> str:
     except PermissionError:
         print("You don't have permission to read from the file!")
     for el in formed_list:
-        if (el.__eq__(formed_list[-1])):
+        if el.__eq__(formed_list[-1]):
             x = (el.index("\t"))
             str_out += el[x:]
         else:
